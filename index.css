@@ -1,0 +1,334 @@
+body{
+  background-color: rgb(24, 23, 23);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Navigation bar */
+nav{
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+}
+
+.toggle_btn{
+  display: none;
+  background: none;
+  border: none;
+}
+
+
+nav p{
+  color: white;
+  font-size: 20px;
+  color: yellow;
+}
+
+.nav-links ul li{
+  color: white;
+  list-style-type: none;
+  width: 160px;
+  font-size: 20px;
+  float: left;
+}
+.nav-links ul li:hover{
+  color: yellow;
+}
+
+.nav-links-responsive{
+  display: none;
+  position: absolute;  
+  top: 0px;
+  background: rgba(51, 49, 49, 0.856);
+  backdrop-filter: blur(100px);
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-links-responsive a{
+  text-decoration: none;
+  color: rgb(250, 243, 243);
+}
+
+.nav-links-responsive.open{
+  height: 140px;
+  }
+
+                        /* Responsive navbar */
+                          @media screen and (max-width:830px){
+                             ul li{
+                              display: none;
+                              }
+
+                            .toggle_btn button{
+                              border: none;
+                              background: none;
+                              color:white;
+                              font-size: 20px;
+                            }
+
+                            .nav-links-responsive.open{
+                              display: block;
+                              width: 100%;
+                            }
+
+                            .toggle_btn{
+                              display: block;
+                              z-index: 1000;
+                            }
+
+                            .nav-links-responsive li{
+                              display: grid;
+                              justify-content: center;
+                              grid-template-rows: 5px 5px 8px 10px;
+                              font-size: 20px;
+                            }
+                            
+                            .nav-links-responsive li:hover{
+                            background-color: rgba(24, 24, 24, 0.434);
+                            }
+                          }
+
+/* Home Page */
+main{
+  display: grid;
+  justify-content: center;
+  gap: 0px;
+}
+
+main #image{
+  width: 700px;
+  animation: lamboimage 1.5s forwards;
+}
+                  /* Animation image*/
+                  @keyframes lamboimage{
+                    0%{
+                      transform: translateX(200px);
+                      opacity: 0;
+                    }
+                    100%{
+                      transform: translateX(0px);
+                      opacity: 1;
+                    }
+                  }
+
+#name{
+  color: rgba(255, 255, 255, 0.595);
+  font-size: 90px;
+  font-weight: 1000;
+  margin: 60px 0px 0px 30px;
+  position: relative;
+  top: 40px;
+  z-index: -1;
+  animation: lamboname 1s linear 1s forwards ;
+  opacity: 0;
+} 
+                /* Animation name */
+                @keyframes lamboname{
+                  0%{
+                    opacity: 0;
+                  }
+                  100%{
+                    opacity: 1;
+                  }
+                }
+
+#mainpagecarinfo{
+  display: grid;
+  grid-template-columns: 450px 100px;
+  text-align: justify;
+  animation: carinfo 1s linear 1.2s forwards ;
+  opacity: 0;
+}
+ 
+              /* Animation carinfo */
+                @keyframes carinfo{
+                  0%{
+                     opacity: 0;
+                     transform: translateY(-30px);
+                    }
+                  100%{
+                     opacity: 1;
+                     transform: translateY(0px);
+                    }
+                }
+#cardetail{
+  width: 300px;
+}
+
+#cardetail h2{
+  color: yellow;
+}
+
+#cardetail p{
+  opacity: 0.4;
+  width: 370px;
+}
+
+.allbox{
+  background-color: rgba(45, 42, 42, 0.7);
+  border-radius: 10px;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.388);
+  box-shadow: 5px 10px 20px black;
+}
+
+.box1{
+  display: grid;
+  grid-template-columns: 150px 100px;
+  margin: 20px 0 0 0px;
+  column-gap: 15%;
+}
+
+.box2{
+  display: grid;
+  row-gap: 10px;
+}
+
+.persecspeed{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 60px;
+  grid-template-rows: 50px 50px 10px;;
+}
+
+.persecspeed h3,.icon-box{
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+.icon-box{
+  color: red;
+}
+
+.box__medium-detail , .box__small-detail{
+  width: 80px;
+}
+.speed .icon-box--small,.power .icon-box--small{
+  font-size: 30px;
+}
+.speed h3,.power h3{
+  font-size: 20px;
+  margin: 0;
+}
+.block{
+  font-size: 30px;
+  height: 30px;
+}
+.speed,.power{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 32px 38px;
+  grid-template-rows: 23px 18px 20px;
+  width: 90px;
+  row-gap: 2px;
+}
+.block1{
+ font-size: 15px;
+}
+
+
+@media screen and (max-width:768px){
+  
+main #image{
+  width: 600px;
+}
+#name{
+  font-size: 80px;
+}
+#cardetail{
+  width: 250px;
+}
+#mainpagecarinfo{
+  grid-template-columns: 400px 100px;
+}
+}
+
+  @media screen and (max-width:664px){
+  
+    main #image{
+      width: 450px;
+    }
+    #name{
+      font-size: 55px;
+      top: 20px;
+   }
+    
+    #cardetail{
+      width: 170px;
+    }
+    
+    #cardetail h2{
+      font-size: 20px;
+    }
+
+    #cardetail p{
+      width: 200px;
+      font-size: 10px;
+    }
+    
+    #mainpagecarinfo{
+      grid-template-columns: 220px 60px;
+      font-size: xx-small;
+    }
+    }
+
+    @media screen and (max-width:468px){
+  
+      main #image{
+        width: 75%;
+        position: relative;
+        left: 20%;
+      }
+      #name{
+        font-size: 40px;
+        position: relative;
+        top: 230px;
+        right: 40px;
+        width: 100px;
+        rotate: -90deg;
+      }
+      
+      #cardetail{
+        width: 70%;
+      }
+      
+      #mainpagecarinfo{
+        display: block;
+        margin-left: 20% ;
+      }
+
+      .box1{
+        display: grid;
+        grid-template-columns: 130px 100px;
+        height: 90px;
+        margin: 40px 0 0 0px;
+      }
+
+      .box{
+        margin: 5px;
+        padding: 3px;
+      }
+      .persecspeed{
+        grid-template-columns: 35px 60px;
+        grid-template-rows: 40px 25px 20px;
+        row-gap: 2px;
+      }
+      .persecspeed h3,.icon-box{
+        font-size: 30px;
+      }
+      .speed h3,.power h3,.block{
+        font-size: 17px;
+      }
+      .speed,.power{
+        grid-template-columns: 30px 34px;
+        grid-template-rows: 20px 10px 13px;
+        width: 90px;
+      }
+      .block1{
+      font-size: 10px;
+      }
+  }

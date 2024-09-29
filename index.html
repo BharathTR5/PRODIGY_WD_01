@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/3e15c08414.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <p>Lamborghini</p>
+
+  <div class="nav-links">
+    <ul>
+      <a href=""><li>Models</li></a>
+      <a href=""><li>Brand</li></a>
+      <a href=""><li>Store</li></a>
+      <a href=""><li>Experience</li></a>
+    </ul>
+  </div>
+    
+    <div class="toggle_btn">
+      <button> <i class="fa fa-bars"></i></button> 
+    </div>
+
+    <div class="nav-links-responsive">
+      <ul>
+        <a href=""><li>Models</li></a>
+        <a href=""><li>Brand</li></a>
+        <a href=""><li>Store</li></a>
+        <a href=""><li>Experience</li></a>
+      </ul>
+    </div>
+    
+  </nav>
+
+  <main>
+    <p id="name">LAMBORGHINI</p>
+
+    <div class="lambo_img">
+    <img src="img/lamborghini.png" alt="" id="image">
+    </div>
+
+    <div id="mainpagecarinfo">
+
+            <div id="cardetail">
+              <h2>LAMBORGHINI GALLARDO LP560</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nostrum quidem maxime odit dolores facilis quo accusamus illo suscipit dolor?</p>
+            </div>
+
+            <div class="box1">
+              <div class="persecspeed allbox">
+                  <ion-icon name="speedometer-outline" class="icon-box"></ion-icon>
+                  <h3 class="box__medium-title inline">3.7</h3>
+                  <span class="box__medium-description block">Sec</span> <br>
+                  <span class="box__medium-detail">0-100 km/h</span>
+              </div>
+
+              <div class="box2">
+                  <div class="speed allbox">
+                      <ion-icon name="trending-up-outline" class="icon-box icon-box--small"></ion-icon>
+                      <h3 class="box__small-title inline">325</h3>
+                      <span class="box__small-description block1">km/h</span> <br>
+                      <span class="box__small-detail">Top Speed</span>
+                  </div>
+                  <div class="power allbox">
+                      <ion-icon name="car-sport-outline" class="icon-box icon-box--small"></ion-icon>
+                      <h3 class="box__small-title inline">8.000</h3>
+                      <span class="box__small-description block1">r.p.m</span> <br>
+                      <span class="box__small-detail">Power</span>
+                  </div>
+              </div>
+
+    </div>
+  </main>
+
+  <script  type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  
+  <script>
+    let ButtonToggle = document.querySelector('.toggle_btn');
+    let toggleBtnIcon = document.querySelector('.toggle_btn i');
+    let dropdown_menu = document.querySelector('.nav-links-responsive');
+
+    ButtonToggle.addEventListener('click',()=>{
+      dropdown_menu.classList.toggle('open');
+      console.log('Toggle button clicked')
+    })
+
+   </script>
+
+</body>
+</html>
